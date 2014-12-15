@@ -1,0 +1,23 @@
+title: $:/themes/welford/phasersonkill-static/templates/tagsviewtemplate
+
+
+
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-blog tc-tagged-tiddlywiki">
+
+! <$list filter="[all[current]]" template="$:/core/ui/TagTemplate" storyview="pop"/> 
+
+<div class="tc-tiddler-body">
+<$list filter="[all[current]tagging[]tag[blog]!sort[created]eachday[created]]">
+<div class="tc-menu-list-item">
+''<$view field="created" format="date" template="YYYY/MM/DD"/>''
+<$list filter="[all[current]tag[blog]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link>
+</div>
+</$list>
+</div>
+</$list>
+
+
+</div>
+</div>

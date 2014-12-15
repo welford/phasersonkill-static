@@ -1,0 +1,164 @@
+title: $:/themes/welford/phasersonkill-static/base
+tags: [[$:/tags/Stylesheet]]
+list-after: $:/themes/welford/phasersonkill/base
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+/*stops the scrollbar screwning things up by forcing it on all the time*/
+html {
+ overflow-y:scroll;
+ max-width:none;
+}
+
+.tc-story-river {
+	position: relative;
+	right: auto;
+	left: auto;
+	width: auto;
+	max-width: 900px;
+	height: 100%;
+	top: 10px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+@media (max-width: 900px) {
+	.tc-story-river {
+		margin-left: 10px;
+	}
+}
+
+.outer {
+	width: 100%;
+}
+
+.inner {
+	position: relative;
+	max-width: 900px;
+	padding: 1px 1px;
+	margin: 0 auto;
+}
+
+/*
+stop tiddly links screwing us n the banner
+*/
+.inner * a.tc-tiddlylink, .inner * a.tc-tiddlylink-missing{
+	font-style: normal; 
+	text-decoration: none;
+	font-weight: normal;
+	color: inherit;
+}
+
+#banner {
+	z-index: 98;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	max-height: 2.32em;
+	margin: 0 auto;
+	background-color: #000;
+	overflow: hidden;
+}
+/*background-color:rgb(152, 44, 138);
+background-color: rgb(255, 0, 87); */
+
+.banner-mob-title, .banner-title {
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	padding: 0px 0px 0px 5px;
+	position: relative;
+	margin: 0 auto;
+	font-size: 2.2em;
+	line-height: 100%;
+	background-color: rgb(255, 0, 87);
+	border-top-left-radius: 13px;
+	border-bottom-right-radius: 13px;
+	color: white;
+	margin-right: 10px;
+}
+
+.banner-spacer {
+	font-size: 2.2em;
+	color:white;
+}
+
+.banner-info, .banner-tags {
+	border-top-right-radius: 11px;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	position: relative;
+	margin: 0;
+	font-size: 2.2em;
+	line-height: 100%;
+	color: rgb(255, 0, 87);
+}
+
+.banner-info {
+}
+
+.banner-tags {
+}
+
+.lower-text {
+	position: relative;
+	bottom: 0;
+}
+
+.banner-subtitle {
+	width: 100%;
+	color: white;
+	padding-left: 10px;
+}
+
+@media (max-width: 600px) {
+	.banner-title {
+		display: none;
+	}
+
+	.banner-subtitle {
+		display: none;
+	}
+}
+
+@media (min-width: 600px) {
+	.banner-mob-title {
+		display: none;
+	}
+}
+
+.tc-body > p {
+	display: None;
+}
+
+body.tc-body {
+	background-color: #fff;
+}
+
+body.tc-body .tc-tiddler-frame {
+	padding: 0;
+	width: auto;
+}
+
+.tc-title {
+	text-shadow: 2px 2px 2px #ccc;
+}
+
+.tc-titlebar h2 {
+	font-size: 1.3em;
+}
+
+.tc-tiddler-title {
+	border-bottom: #ddd 1px solid;
+}
+.tc-menu-list-subitem {
+padding-left: 15px;
+}
+
+/* undo some funky business from phasersonkill */
+
+@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {
+	/* above max width don't move the sidebar anymore */
+	body.tc-body .tc-sidebar-scrollable {		
+		left:auto;
+		width:auto;
+	}
+}
