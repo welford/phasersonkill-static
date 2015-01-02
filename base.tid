@@ -125,9 +125,11 @@ background-color: rgb(255, 0, 87); */
 	}
 }
 
-.tc-body > p {
+.tc-body > p{
 	display: None;
 }
+
+.tc-dropzone > p, .tc-story-river > p:nth-of-type(1) { display:none; }
 
 body.tc-body {
 	background-color: #fff;

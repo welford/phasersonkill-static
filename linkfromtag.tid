@@ -1,3 +1,0 @@
-title: $:/themes/welford/phasersonkill-static/linkfromtag
-
-<$link to={{!!title}}><$view field="title"></$link>

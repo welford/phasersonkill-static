@@ -3,5 +3,5 @@ title: $:/core/ui/ViewTemplate/tags
 
 <div class="tc-tags-wrapper">
 <$list filter="[all[current]tags[]sort[title]]-[[blog-framework]]-[[blog]]">
-<$link to={{!!title}}><$transclude tiddler="$:/core/ui/TagTemplate"/></$link></$list>
+<$link to={{!!title}} taglink="true"><$transclude tiddler="$:/core/ui/TagTemplate"/></$link></$list>
 </div>
