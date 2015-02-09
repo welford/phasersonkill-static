@@ -125,13 +125,13 @@ background-color: rgb(255, 0, 87); */
 	width:32px;
 }
 
-@media (max-device-width: 549px) {
+@media (max-width: 569px) {
 	.banner-title {
 		display: none;
 	}	
 }
 
-@media (max-device-width: 425px) {	
+@media (max-width: 445px) {	
 	.banner-image0,.banner-image1{
 		display:none;
 	}	
@@ -139,13 +139,13 @@ background-color: rgb(255, 0, 87); */
 
 
 
-@media (max-device-width: 702px) {
+@media (max-width: 702px) {
 	.banner-subtitle {
 		display: none;
 	}	
 }
 
-@media (min-device-width: 550px) {
+@media (min-width: 570px) {
 	.banner-mob-title {
 		display: none;
 	}
