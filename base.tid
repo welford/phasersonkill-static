@@ -109,12 +109,33 @@ background-color: rgb(255, 0, 87); */
 	padding-left: 10px;
 }
 
+.banner-image0{
+	vertical-align: bottom;
+	position:absolute;
+	right:10px;
+	height:32px;
+	width:32px;
+}
+
+.banner-image1{
+	vertical-align: bottom;
+	position:absolute;
+	right:45px;
+	height:32px;
+	width:32px;
+}
+
 @media (max-width: 600px) {
 	.banner-title {
 		display: none;
 	}
-
 	.banner-subtitle {
+		display: none;
+	}
+	.banner-image0{
+		display: none;
+	}
+	.banner-image1{
 		display: none;
 	}
 }
@@ -163,4 +184,14 @@ padding-left: 15px;
 		left:auto;
 		width:auto;
 	}
+}
+
+.taglink.tc-tiddlylink{
+color:transparent; 
+}
+.banner-img{
+display:inline;
+}
+.long-links{
+white-space:pre-line;
 }
