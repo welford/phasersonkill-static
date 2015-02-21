@@ -1,5 +1,0 @@
-title: $:/themes/welford/phasersonkill-static/linktopost
-
-<$link to={{!!title}}>View As Single Post >></$link>
-<br/>
-<br/>
