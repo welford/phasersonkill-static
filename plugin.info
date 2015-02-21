@@ -5,5 +5,5 @@
 	"core-version": ">=5.0.0",
 	"plugin-type": "theme",
 	"description": "custom static theme based on Seamless",
-	"dependents": ["$:/themes/tiddlywiki/vanilla","$:/themes/welford/phasersonkill"]
+	"dependents": ["$:/themes/tiddlywiki/vanilla"]
 }

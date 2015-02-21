@@ -1,8 +1,262 @@
 title: $:/themes/welford/phasersonkill-static/base
 tags: [[$:/tags/Stylesheet]]
-list-after: $:/themes/welford/phasersonkill/base
+list-after: $:/themes/tiddlywiki/vanilla/base
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+/*
+Rules copied from Snow White---------------------------------------------
+*/
+
+.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {
+	<<transition "fill 150ms ease-in-out">>
+}
+
+.tc-tiddler-controls button.tc-selected svg {
+	<<filter "drop-shadow(0px -1px 2px rgba(0,0,0,0.25))">>
+}
+
+.tc-drop-down {
+	border-radius: 4px;
+	<<box-shadow "2px 2px 10px rgba(0, 0, 0, 0.5)">>
+}
+
+.tc-block-dropdown {
+	border-radius: 4px;
+	<<box-shadow "2px 2px 10px rgba(0, 0, 0, 0.5)">>
+}
+
+.tc-modal-displayed {
+	-webkit-filter: blur(4px);
+}
+
+.tc-modal {
+	border-radius: 6px;
+	<<box-shadow "0 3px 7px rgba(0,0,0,0.3)">>
+}
+
+.tc-modal-footer {
+	border-radius: 0 0 6px 6px;
+	<<box-shadow "inset 0 1px 0 #fff">>;
+}
+
+.tc-alert {
+	border-radius: 6px;
+	<<box-shadow "0 3px 7px rgba(0,0,0,0.6)">>
+}
+
+.tc-notification {
+	border-radius: 6px;
+	<<box-shadow "0 3px 7px rgba(0,0,0,0.3)">>
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
+}
+
+.tc-message-box img {
+	<<box-shadow "1px 1px 3px rgba(0,0,0,0.5)">>
+}
+
+/*
+PhaserOnKill Stuff---------------------------------------------
+*/
+
+blockquote { border-left:2px dashed #DDD; margin-left:12px; }
+
+.block-indent { border:none; margin-left:0px; padding-left:15px; }
+
+/* page header */
+div.tc-pagetop { 
+ position:fixed;
+ max-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+ width: 100%;
+ top : 0px;
+ left : 0px;
+ padding-left: 5px;  
+ z-index: 98;
+ background : {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}}; !important; /* as background */
+ overflow:hidden;
+ vertical-align:middle;
+ line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}}; 
+ opacity:0.93;
+ box-shadow: #ccc 0px 1px 5px;
+}
+
+.tc-pagetop b { color:{{$:/themes/welford/phasersonkill/metrics/headerfontcolour}}; font-size:1.1em;}
+
+.tc-story-river {
+ width: auto;
+ height: 100%;
+ left: 0px;
+ top: {{$:/themes/welford/phasersonkill/metrics/headerheight}};
+ padding: 0px 10px 0px 10px;
+ margin: 0;
+ background-color: #fff;}
+
+.tc-tiddler-frame .tc-tiddler-body {
+	font-size: {{$:/themes/tiddlywiki/vanilla/metrics/fontsize}};
+	line-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};
+}
+
+.tc-tiddler-frame {
+ width:100%; 
+}
+
+
+/* Use the tiddler background colour for the page background */
+html {max-width:{{$:/themes/welford/phasersonkill/metrics/maxwidth}};}
+
+html body.tc-body {
+	background-color: <<colour background>>;	
+}
+
+html:-webkit-full-screen {
+	background-color: <<colour background>>;
+}
+
+/* Adjust the colour of the page controls */
+body.tc-body .tc-page-controls svg {
+	fill: <<colour muted-foreground>>;
+}
+
+/* Adjust the colour of the sidebar selected tabs */
+body.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {
+	background-color: <<colour background>>;
+}
+
+/* tiddler titles  */
+.tc-tiddler-title {
+border-bottom: 1px solid {{$:/themes/welford/phasersonkill/metrics/titlebordercolour}};
+}
+
+/* stop the p tags form adding unwanted padding at the stop of the story river */
+
+.tc-dropzone > p,  { margin:0px; padding:0px; }
+
+/* hide the reveal stuff for the sidebar*/
+span.tc-topbar {display:none;}
+
+/* color and size of controls in topbar for smallscreen version */
+.tc-pagetop svg.tc-image-button {
+padding:0;
+margin:0; 
+fill:red;
+width:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+vertical-align:middle;
+}
+
+.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { 
+position : fixed;
+top : {{$:/themes/welford/phasersonkill/metrics/headerheight}};
+left : 0px;	
+padding: 0px 10px 0px 10px;
+margin: 0;
+background:  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};
+z-index: 99;
+box-shadow: 0px 10px 30px  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};
+border-top:1px dashed #ddd;
+}
+
+.hacky-buffer .tc-reveal{ display: block; }
+.hacky-buffer .tc-reveal .tc-search-results { position : static;}
+
+.topbar-hack { 
+	height : {{$:/themes/welford/phasersonkill/metrics/headerheight}};
+	position : static;
+}
+
+.tc-pagetop-close-search  svg { 
+position: fixed;
+top : {{$:/themes/welford/phasersonkill/metrics/headerheight}};
+width:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+z-index: 99;
+/* close search button */
+right: {{$:/themes/welford/phasersonkill/metrics/border}};
+margin-top:5px;
+}
+
+.smallscreen-only .tc-reveal	{display : block;}
+.displayblock					{display : block;}
+
+
+.tc-scrollable {	
+	max-height: {{$:/themes/welford/phasersonkill/metrics/searchheight}};
+}
+
+.topsearchform  { display:inline; padding:0; margin:0;}
+
+/* 
+small screen differences 
+*/
+
+@media (max-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}} ) 
+{
+	.tc-sidebar-header		{ display:none;}	
+	.largescreen-only	{ display:none; }	
+	.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { 
+		width: 100%;
+		right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; 
+		opacity:0.93;
+	}		
+
+	/* width with sidebar no shown */
+	body.tc-body .tc-tiddler-frame	{ padding: 0; }
+}
+
+/* 
+larger screen differences 
+*/
+
+@media (min-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}}) {
+
+	/* Move the sidebar up so that the title lines up */
+	body.tc-body .tc-sidebar-scrollable {
+		position: fixed;
+		left : auto;
+		margin:0;
+		top:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+		width:{{$:/themes/welford/phasersonkill/metrics/menuwidth}};
+		padding: 0 0 0 20px;
+		background-color:{{$:/themes/welford/phasersonkill/metrics/sidebarcolour}};
+	}
+
+	.tc-pagetop { 
+		/*line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
+		vertical-align:middle;*/
+	}
+
+	.tc-story-river { 
+	 right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; 
+	 position: absolute;
+	}	
+
+	.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { 
+	 width: 100%;
+	 right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; 
+	 opacity:0.93;
+	}
+
+	/* Stop the tiddler info panel from bleeding into the tiddler frame padding */
+	body.tc-body .tc-tiddler-info { margin: 0; }
+
+	/* Stop message boxes from bleeding into the tiddler frame padding */
+	body.tc-body .tc-message-box { margin: 21px 0 21px 0; }
+
+	/* Hide smallscreen only stuff */
+	.smallscreen-only	{ display:none;}	
+
+	/* width with sidebar shown */
+	body.tc-body .tc-tiddler-frame	{ padding: 0 20px 0 0; }
+}
+
+@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {
+	/* above max width don't move the sidebar anymore */
+	body.tc-body .tc-sidebar-scrollable {		
+		left: calc({{$:/themes/welford/phasersonkill/metrics/maxwidth}} - {{$:/themes/welford/phasersonkill/metrics/menuwidth}});
+		width:auto;
+	}
+}
+button.tc-tag-label, span.tc-tag-label{border-radius:3px;}
 
 /*stops the scrollbar screwning things up by forcing it on all the time*/
 html {
