@@ -363,20 +363,24 @@ background-color: rgb(255, 0, 87); */
 	padding-left: 10px;
 }
 
-.banner-image0{
+#banner > div > a.banner-image-git > svg{
 	vertical-align: bottom;
 	position:absolute;
-	right:45px;	
-	height:32px;
-	width:32px;
+	right:55px;	
+	height:39px;
+	width:39px;
+	fill:white;	
+	top:-4px;
 }
 
-.banner-image1{
-	vertical-align: bottom;
+#banner > div > a.banner-image-twit > svg{
+	vertical-align: middle;
 	position:absolute;
 	right:10px;
-	height:32px;
-	width:32px;
+	height:43px;
+	width:43px;
+	fill:white;	
+	top:-5px;	
 }
 
 @media (max-width: 569px) {
@@ -453,4 +457,8 @@ display:inline;
 }
 .long-links{
 white-space:pre-line;
+}
+
+a.tc-tiddlylink-missing{
+	font-style: inherit; 	
 }
