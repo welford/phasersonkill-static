@@ -304,6 +304,10 @@ stop tiddly links screwing us n the banner
 	color: inherit;
 }
 
+a.tc-tiddlylink-shadow{	
+	font-weight: inherit;	
+}
+
 #banner {
 	z-index: 98;
 	position: fixed;
@@ -390,7 +394,7 @@ background-color: rgb(255, 0, 87); */
 }
 
 @media (max-width: 445px) {	
-	.banner-image0,.banner-image1{
+	.banner-image-git,.banner-image-twit{
 		display:none;
 	}	
 }
@@ -462,3 +466,5 @@ white-space:pre-line;
 a.tc-tiddlylink-missing{
 	font-style: inherit; 	
 }
+
+.tc-tag-list-item { margin-right: 0; }
