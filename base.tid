@@ -1,12 +1,13 @@
 title: $:/themes/welford/phasersonkill-static/base
 tags: [[$:/tags/Stylesheet]]
-list-after: $:/themes/tiddlywiki/vanilla/base
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
 
 /*
 Rules copied from Snow White---------------------------------------------
 */
+
+html { font-family: 'PT Sans', sans-serif; }
 
 .tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {
 	<<transition "fill 150ms ease-in-out">>
@@ -55,9 +56,9 @@ Rules copied from Snow White---------------------------------------------
 	<<box-shadow "1px 1px 3px rgba(0,0,0,0.5)">>
 }
 
-/*
-PhaserOnKill Stuff---------------------------------------------
-*/
+/********************************************************
+PhaserOnKill Stuff STATIC
+********************************************************/
 
 blockquote { border-left:2px dashed #DDD; margin-left:12px; }
 
@@ -72,7 +73,7 @@ div.tc-pagetop {
  left : 0px;
  padding-left: 5px;  
  z-index: 98;
- background : {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}}; !important; /* as background */
+ background : <<colour pagetop-background>>; !important; /* as background */
  overflow:hidden;
  vertical-align:middle;
  line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}}; 
@@ -80,7 +81,7 @@ div.tc-pagetop {
  box-shadow: #ccc 0px 1px 5px;
 }
 
-.tc-pagetop b { color:{{$:/themes/welford/phasersonkill/metrics/headerfontcolour}}; font-size:1.1em;}
+.tc-pagetop b { color:<<colour headerclr>>; font-size:1.1em;}
 
 .tc-story-river {
  width: auto;
@@ -89,7 +90,8 @@ div.tc-pagetop {
  top: {{$:/themes/welford/phasersonkill/metrics/headerheight}};
  padding: 0px 10px 0px 10px;
  margin: 0;
- background-color: #fff;}
+ background-color: <<color background>>;
+}
 
 .tc-tiddler-frame .tc-tiddler-body {
 	font-size: {{$:/themes/tiddlywiki/vanilla/metrics/fontsize}};
@@ -124,7 +126,7 @@ body.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {
 
 /* tiddler titles  */
 .tc-tiddler-title {
-border-bottom: 1px solid {{$:/themes/welford/phasersonkill/metrics/titlebordercolour}};
+border-bottom: 1px solid <<colour linesclr>>;
 }
 
 /* stop the p tags form adding unwanted padding at the stop of the story river */
@@ -138,7 +140,6 @@ span.tc-topbar {display:none;}
 .tc-pagetop svg.tc-image-button {
 padding:0;
 margin:0; 
-fill:red;
 width:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
 height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};
 vertical-align:middle;
@@ -150,9 +151,9 @@ top : {{$:/themes/welford/phasersonkill/metrics/headerheight}};
 left : 0px;	
 padding: 0px 10px 0px 10px;
 margin: 0;
-background:  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};
+background:  <<color pagetop-background>>;
 z-index: 99;
-box-shadow: 0px 10px 30px  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};
+box-shadow: 0px 10px 30px  transparent;
 border-top:1px dashed #ddd;
 }
 
@@ -273,7 +274,7 @@ html {
 	height: 100%;
 	top: 10px;
 	margin: 0 auto;
-	background-color: #fff;
+	background-color: <<color background>>;
 	padding: 30px 0;
 }
 
@@ -322,7 +323,7 @@ a.tc-tiddlylink-shadow{
 background-color: rgb(255, 0, 87); */
 
 .banner-mob-title, .banner-title {
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding: 0px 0px 0px 5px;
 	position: relative;
 	margin: 0 auto;
@@ -342,7 +343,7 @@ background-color: rgb(255, 0, 87); */
 
 .banner-info, .banner-tags {
 	border-top-right-radius: 11px;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	position: relative;
 	margin: 0;
 	font-size: 2.2em;
@@ -443,7 +444,7 @@ body.tc-body .tc-tiddler-frame {
 padding-left: 15px;
 }
 
-/* undo some funky business from phasersonkill */
+/* undo some funky business from phasersonkill - james */
 
 @media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {
 	/* above max width don't move the sidebar anymore */
