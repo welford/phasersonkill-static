@@ -430,7 +430,7 @@ body.tc-body .tc-tiddler-frame {
 }
 
 .tc-title {
-	text-shadow: 2px 2px 2px #ccc;
+	text-shadow: 2px 2px 2px #111;
 }
 
 .tc-titlebar h2 {
